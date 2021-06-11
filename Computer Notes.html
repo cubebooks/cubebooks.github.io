@@ -12,6 +12,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="animate.min.css">
 		<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 	</head>
 	<body class="is-preload">
 
@@ -19,13 +23,14 @@
 			<section id="header">
 				<header>
 					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="index.html"><p class="animated zoomIn">Cube Books</p></a></h1>
+					<h1 id="logo"><a href="index.html"><p class="animated zoomIn">CubeBooks</p></a></h1>
 					<p class="animated fadeInUp delay-1s">YOUR PERSONAL LIBRARY</p>
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="#one"><p class="animated fadeInRight">Notes</p></a></li>
-						<li><a href="#four"><p class="animated fadeInLeft">Contact</p></a></li>
+						<li><a href="#one"><p class="animated fadeInRight">CICSE</p></a></li>
+						<li><a href="#two"><p class="animated fadeInLeft">CBSE</p></a></li>
+						<li><a href="#four"><p class="animated fadeInRight">Contact</p></a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -46,12 +51,35 @@
 						<!--One -->
 						<section id="one">
 							<div data-role="main" class="ui-content">
-								<ul data-role="listview" data-filter="true" data-filter-reveal="true">
-									<li><a href="Place the drive link here">PLace the book name here</a></li>
+								<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search">
+									<li><a href="#place the drive link here">Place the book name here</a></li>
 								</ul>
 							</div>
 							<div class="container">
-								<h3 class="animated zoomIn">Notes</h3>
+								<h3 class="animated zoomIn">CISCE</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Notes</th>
+												<th>Download</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Place the book name here</td>
+												<td><a href="#place the drive link here" class="button primary icon solid fa-download">PDF</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+
+						<!--Two -->
+						<section id="two">
+							<div class="container">
+								<h3 class="animated zoomIn">CBSE</h3>
 								<div class="table-wrapper">
 									<table>
 										<thead>
@@ -84,7 +112,7 @@
 					<section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Cube Books 2021. All rights reserved.</li>
+								<li>&copy; CubeBooks 2021. All rights reserved.</li>
 							</ul>
 							<ul class="icons">
 								<li><a href="https://www.linkedin.com/company/78048587/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
