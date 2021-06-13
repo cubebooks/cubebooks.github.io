@@ -6,25 +6,23 @@
 -->
 <html>
 	<head>
-		<title>Cube Books</title>
+		<title>CubeBooks</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="animate.min.css">
+		<link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<meta name="keywords" content="CubeBooks, cubebooks, cube, books, cube books, books pdf, kaustav, krish, abhishek, shishir, pdf, open-source" />
+		<meta name="author" content="CubeBooks" />
+		<meta name="description" content="It is an open-source platform. Now one does not have to surf web pages after webpages to find a pdf of a single. As CubeBooks by everyone's sides, one does not have to worry to find pdfs. CubeBooks is under development soon it will be the junction point of all books.">
 	</head>
 	<style>
 		.dropbtn {
 		  background-color: #ffffff;
-		  color: rgb(0, 0, 0);
-		  padding: 0px;
-		  font-size: 16px;
+		  color: rgb(97, 97, 97);
+		  font-size: 17px;
 		  border: none;
-		  cursor: pointer;
-		}
-		
-		.dropbtn:hover, .dropbtn:focus {
-		  background-color: #29b982;
 		}
 		
 		.dropdown {
@@ -37,29 +35,30 @@
 		  position: absolute;
 		  background-color: #f1f1f1;
 		  min-width: 160px;
-		  overflow: auto;
 		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		  z-index: 1;
 		}
 		
 		.dropdown-content a {
-		  color: black;
+		  color: #04AA6D;
 		  padding: 12px 16px;
 		  text-decoration: none;
 		  display: block;
 		}
 		
-		.dropdown a:hover {background-color: #ddd;}
+		.dropdown-content a:hover {background-color: #ddd;}
 		
-		.show {display: block;}
-	</style>
+		.dropdown:hover .dropdown-content {display: block;}
+		
+		.dropdown:hover .dropbtn {background-color: #ffffff;}
+		</style>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="index.html"><p class="animated zoomIn">Cube Books</p></a></h1>
+					<span class="image avatar"><a href="index.html"><img src="images/avatar.jpg" alt="" /></a></span>
+					<h1 id="logo"><a href="#header"><p class="animated zoomIn">CubeBooks</p></a></h1>
 					<p class="animated fadeInUp delay-1s">YOUR PERSONAL LIBRARY</p>
 				</header>
 				<nav id="nav">
@@ -91,7 +90,7 @@
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2 class="animated fadeInLeft">Welcome to Cube Books</h2>
+										<h2 class="animated fadeInLeft">Welcome to <a href="index.html"><i>CubeBooks</i></a></h2>
 									</header>
 									<p class="animated fadeInRight">It is an open-source platform. Now one does not have to surf web pages after webpages to find a pdf of a single. As CubeBooks by everyone's sides, one does not have to worry to find pdfs. CubeBooks is under development soon it will be the junction point of all books.</p>
 								</div>
@@ -100,110 +99,68 @@
 						<!-- Two -->
 							<section id="two">
 								<div class="container">
-									<h3 class="animated zoomIn">BOOKS</h3>
+									<h2 class="animated zoomIn"><b>BOOKS</b></h2>
 									<p>We are still updating the books, please us know if want any book to added</p>
 									<ul class="feature-icons">
 										<li class="solid icon fa-book">
 											<div class="dropdown">
-												<button onclick="myFunction()" class="dropbtn"><h4 class="animated slideInRight">English</h4></button>
-												<div id="myDropdown" class="dropdown-content">
-												  <a href="English%20Books.html">Books</a>
-												  <a href="English%20Notes.html">Notes</a>
-												  <a href="English%20Papers.html">Question Paper</a>
-												</div>
-											  </div>
-											  
-											  <script>
-
-											  function myFunction() {
-												document.getElementById("myDropdown").classList.toggle("show");
-											  }
-											  
-											  // Close the dropdown if the user clicks outside of it
-											  window.onclick = function(event) {
-												if (!event.target.matches('.dropbtn')) {
-												  var dropdowns = document.getElementsByClassName("dropdown-content");
-												  var i;
-												  for (i = 0; i < dropdowns.length; i++) {
-													var openDropdown = dropdowns[i];
-													if (openDropdown.classList.contains('show')) {
-													  openDropdown.classList.remove('show');
-													}
-												  }
-												}
-											  }
-											  </script>
+											<button class="dropbtn"><h4 class="animated fadeInRight">English</h4></button>
+											<div class="dropdown-content">
+												<a href="English%20Books.html">Books</a>
+												<a href="English%20Notes.html">Notes</a>
+												<a href="English%20Papers.html">Question Papers</a>
+											</div>
+											</div>
 										</li>									
 										<li class="solid icon fa-book">
 											<div class="dropdown">
-												<button onclick="myFunction()" class="dropbtn"><h4 class="animated slideInRight">Physics</h4></button>
-												<div id="myDropdown" class="dropdown-content">
-												  <a href="English%20Books.html">Books</a>
-												  <a href="#about">Notes</a>
-												  <a href="#contact">Question Paper</a>
-												</div>
-											  </div>
-											  
-											  <script>
-
-											  function myFunction() {
-												document.getElementById("myDropdown").classList.toggle("show");
-											  }
-											  
-											  // Close the dropdown if the user clicks outside of it
-											  window.onclick = function(event) {
-												if (!event.target.matches('.dropbtn')) {
-												  var dropdowns = document.getElementsByClassName("dropdown-content");
-												  var i;
-												  for (i = 0; i < dropdowns.length; i++) {
-													var openDropdown = dropdowns[i];
-													if (openDropdown.classList.contains('show')) {
-													  openDropdown.classList.remove('show');
-													}
-												  }
-												}
-											  }
-											  </script>
+											<button class="dropbtn"><h4 class="animated fadeInRight">Physics</h4></button>
+											<div class="dropdown-content">
+												<a href="Physics%20Books.html">Books</a>
+												<a href="Physics%20Notes.html">Notes</a>
+												<a href="Physics%20Papers.html">Question Papers</a>
+											</div>
+											</div>
 										</li>										
 										<li class="solid icon fa-book">
 											<div class="dropdown">
-												<button onclick="myFunction()" class="dropbtn"><h4 class="animated slideInRight">Chemistry</h4></button>
-												<div id="myDropdown" class="dropdown-content">
-												  <a href="#home">Books</a>
-												  <a href="#about">Notes</a>
-												  <a href="#contact">Question Paper</a>
-												</div>
-											  </div>
-											  
-											  <script>
-
-											  function myFunction() {
-												document.getElementById("myDropdown").classList.toggle("show");
-											  }
-											  
-											  // Close the dropdown if the user clicks outside of it
-											  window.onclick = function(event) {
-												if (!event.target.matches('.dropbtn')) {
-												  var dropdowns = document.getElementsByClassName("dropdown-content");
-												  var i;
-												  for (i = 0; i < dropdowns.length; i++) {
-													var openDropdown = dropdowns[i];
-													if (openDropdown.classList.contains('show')) {
-													  openDropdown.classList.remove('show');
-													}
-												  }
-												}
-											  }
-											  </script>
+											<button class="dropbtn"><h4 class="animated fadeInRight">Chemistry</h4></button>
+											<div class="dropdown-content">
+												<a href="Chemistry%20Books.html">Books</a>
+												<a href="Chemistry%20Notes.html">Notes</a>
+												<a href="Chemistry%20Papers.html">Question Papers</a>
+											</div>
+											</div>
 										</li>										
 										<li class="solid icon fa-book">
-											<h4 class="animated slideInRight">Mathematics</h4></a>
+											<div class="dropdown">
+											<button class="dropbtn"><h4 class="animated fadeInRight">Biology</h4></button>
+											<div class="dropdown-content">
+												<a href="Biology%20Books.html">Books</a>
+												<a href="Biology%20Notes.html">Notes</a>
+												<a href="Biology%20Papers.html">Question Papers</a>
+											</div>
+											</div>
 										</li>										
 										<li class="solid icon fa-book">
-											<h4 class="animated slideInRight">Biology</h2></a>
+											<div class="dropdown">
+											<button class="dropbtn"><h4 class="animated fadeInRight">Mathematics</h4></button>
+											<div class="dropdown-content">
+												<a href="Mathematics%20Books.html">Books</a>
+												<a href="Mathematics%20Notes.html">Notes</a>
+												<a href="Mathematics%20Papers.html">Question Papers</a>
+											</div>
+											</div>
 										</li>										
 										<li class="solid icon fa-book">
-											<h4 class="animated slideInRight">Computer Science</h4></a>
+											<div class="dropdown">
+											<button class="dropbtn"><h4 class="animated fadeInRight">Computer Science</h4></button>
+											<div class="dropdown-content">
+												<a href="Computer%20Books.html">Books</a>
+												<a href="Computer%20Notes.html">Notes</a>
+												<a href="Computer%20Papers.html">Question Papers</a>
+											</div>
+											</div>
 										</li>
 									</ul>
 								</div>
@@ -554,7 +511,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Cube Books 2021. All rights reserved.</li>
+								<li>&copy; CubeBooks 2021. All rights reserved.</li>
 							</ul>
 							<ul class="icons">
 								<li><a href="https://www.linkedin.com/company/78048587/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>

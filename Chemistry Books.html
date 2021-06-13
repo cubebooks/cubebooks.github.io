@@ -16,13 +16,72 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</head>
+	<style>
+		.dropbtn
+		{
+			padding: 16px;
+			font-size: 26px;
+			border: 10px;
+			cursor: pointer;
+		}
+		#myInput
+		{
+			width: 1180px;
+			box-sizing: border-box;
+			background-position: 14px 12px;
+			background-repeat: no-repeat;
+			background-color: #ffffff;
+			color: rgb(59, 59, 59);
+			font-size: 20px;
+			padding: 14px 20px 12px 45px;
+			border: none;
+			border: 1.5px solid #04AA6d ;
+		}
+		#myInput:focus
+		{
+			outline: none;
+		}
+		.dropdown
+		{
+			position: relative;
+			display: inline-block;
+			border: 10px;
+		}
+		.dropdown-content
+		{
+			display: none;
+			position: absolute;
+			background-color: #f6f6f6;
+			width: 1150px;
+			overflow: auto;
+			border: 1px solid #ddd;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+		.dropdown-content a
+		{
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		.dropdown a:hover
+		{
+			background-attachment: #ddd;
+			color: #04AA6D;
+		}
+		.show
+		{
+			display: inline-block;
+		}
+	</style>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="index.html"><p class="animated zoomIn">CubeBooks</p></a></h1>
+					<span class="image avatar"><a href="index.html"><img src="images/avatar.jpg" alt="" /></a></span>
+					<h1 id="logo"><a href="#header"><p class="animated zoomIn">CubeBooks</p></a></h1>
 					<p class="animated fadeInUp delay-1s">YOUR PERSONAL LIBRARY</p>
 				</header>
 				<nav id="nav">
@@ -50,10 +109,11 @@
 
 						<!--One -->
 						<section id="one">
-							<div data-role="main" class="ui-content">
-								<ul data-role="listview" data-filter="true" data-filter-reveal="true">
-									<li><a href="Place the drive link here">PLace the book name here</a></li>
-								</ul>
+							<div class="dropdown">
+							<input type="text" onclick="myFunction()" class="dropbtn" placeholder="Search Here....." id="myInput" onkeyup="filterFunction()">
+								<div id="myDropdown" class="dropdown-content">
+									<a href="Place the drive link here">Place the book name here</a>
+								</div>
 							</div>
 							<div class="container">
 								<h3 class="animated zoomIn">Entrance</h3>
@@ -156,6 +216,32 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function myFunction()
+				{
+					document.getElementById("myDropdown").classList.toggle("show");
+				}
+				function filterFunction()
+				{
+					var input, filter, ul, li, a, i;
+					input = document.getElementById("myInput");
+					filter = input.value.toUppercase();
+					div = document.getElementById("myDropdown");
+					a = div.getElementByTagName("a");
+					for (i=0; i < a.length; i++)
+					{
+						txtValue = a[i].textContent  || a[i].innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1)
+						{
+							a[i].style.display = "";
+						}
+						else
+						{
+							a[i].style.display = "none";
+						}
+					}
+				}
+			</script>
 
 	</body>
 </html>
