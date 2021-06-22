@@ -6,13 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Entrance Books</title>
+		<title>Commerce Papers</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="animate.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</head>
@@ -26,7 +25,7 @@
 		}
 		#myInput
 		{
-			width: 1000px;
+			width: 980px;
 			box-sizing: border-box;
 			background-position: 14px 12px;
 			background-repeat: no-repeat;
@@ -52,7 +51,7 @@
 			display: none;
 			position: absolute;
 			background-color: #f6f6f6;
-			width: 970px;
+			width: 950px;
 			overflow: auto;
 			border: 1px solid #ddd;
 			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -86,7 +85,8 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="#two"><p class="animated fadeInRight">Entrance</p></a></li>
+						<li><a href="#one"><p class="animated fadeInRight">CISC</p></a></li>
+						<li><a href="#two"><p class="animated fadeInRight">CBSE</p></a></li>
 						<li><a href="#four"><p class="animated fadeInLeft">Contact</p></a></li>
 					</ul>
 				</nav>
@@ -105,39 +105,58 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Two -->
-							<section id="two">
-								<div class="dropdown">
-								<input type="text" onclick="myFunction()" class="dropbtn" placeholder="Search Here....." id="myInput" onkeyup="filterFunction()">
-									<div id="myDropdown" class="dropdown-content">
-										<a href="Place the drive link here">Place the book name here</a>
-									</div>
+						<!--One -->
+						<section id="one">
+							<div class="dropdown">
+							<input type="text" onclick="myFunction()" class="dropbtn" placeholder="Search Here....." id="myInput" onkeyup="filterFunction()">
+								<div id="myDropdown" class="dropdown-content">
+									<a href="Place the drive link here">Place the book name here</a>
 								</div>
-								<div class="container">
-									<h3 class="animated zoomIn">Entrance</h3>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Download</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>All In One For Neet</td>
-													<td><a href="https://drive.google.com/file/d/1TYjZEyX0Y1Als1-m-zxZ4a1mfI9U025b/view?usp=sharing" class="button primary icon solid fa-download">PDF</a></td>
-												</tr>
-												<tr>
-													<td>Place the book name here</td>
-													<td><a href="#place the drive link here" class="button primary icon solid fa-download">PDF</a></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+							</div>
+							<div class="container">
+								<h3 class="animated zoomIn">CISC</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Papers</th>
+												<th>Download</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Place the book name here</td>
+												<td><a href="#place the drive link here" class="button primary icon solid fa-download">PDF</a></td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
-							</section>
+							</div>
+						</section>
 
+						<!--Two -->
+						<section id="two">
+							<div class="container">
+								<h3 class="animated zoomIn">CBSE</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Papers</th>
+												<th>Download</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Place the book name here</td>
+												<td><a href="#place the drive link here" class="button primary icon solid fa-download">PDF</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+				
 						<!-- Four -->
 							<section id="four">
 								<div class="container">
@@ -197,5 +216,6 @@
 					}
 				}
 			</script>
+
 	</body>
 </html>

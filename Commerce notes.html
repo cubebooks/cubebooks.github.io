@@ -6,15 +6,16 @@
 -->
 <html>
 	<head>
-		<title>Entrance Books</title>
+		<title>Commerce Notes</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="animate.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 	</head>
 	<style>
 		.dropbtn
@@ -86,8 +87,9 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="#two"><p class="animated fadeInRight">Entrance</p></a></li>
-						<li><a href="#four"><p class="animated fadeInLeft">Contact</p></a></li>
+						<li><a href="#one"><p class="animated fadeInRight">CISC</p></a></li>
+						<li><a href="#two"><p class="animated fadeInLeft">CBSE</p></a></li>
+						<li><a href="#four"><p class="animated fadeInRight">Contact</p></a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -105,39 +107,58 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Two -->
-							<section id="two">
-								<div class="dropdown">
-								<input type="text" onclick="myFunction()" class="dropbtn" placeholder="Search Here....." id="myInput" onkeyup="filterFunction()">
-									<div id="myDropdown" class="dropdown-content">
-										<a href="Place the drive link here">Place the book name here</a>
-									</div>
+						<!--One -->
+						<section id="one">
+							<div class="dropdown">
+							<input type="text" onclick="myFunction()" class="dropbtn" placeholder="Search Here....." id="myInput" onkeyup="filterFunction()">
+								<div id="myDropdown" class="dropdown-content">
+									<a href="Place the drive link here">Place the book name here</a>
 								</div>
-								<div class="container">
-									<h3 class="animated zoomIn">Entrance</h3>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Download</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>All In One For Neet</td>
-													<td><a href="https://drive.google.com/file/d/1TYjZEyX0Y1Als1-m-zxZ4a1mfI9U025b/view?usp=sharing" class="button primary icon solid fa-download">PDF</a></td>
-												</tr>
-												<tr>
-													<td>Place the book name here</td>
-													<td><a href="#place the drive link here" class="button primary icon solid fa-download">PDF</a></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+							</div>
+							<div class="container">
+								<h3 class="animated zoomIn">CISC</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Notes</th>
+												<th>Download</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Place the book name here</td>
+												<td><a href="#place the drive link here" class="button primary icon solid fa-download">PDF</a></td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
-							</section>
+							</div>
+						</section>
 
+						<!--Two -->
+						<section id="two">
+							<div class="container">
+								<h3 class="animated zoomIn">CBSE</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Notes</th>
+												<th>Download</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Place the book name here</td>
+												<td><a href="#place the drive link here" class="button primary icon solid fa-download">PDF</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+				
 						<!-- Four -->
 							<section id="four">
 								<div class="container">
@@ -171,31 +192,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				function myFunction()
-				{
-					document.getElementById("myDropdown").classList.toggle("show");
-				}
-				function filterFunction()
-				{
-					var input, filter, ul, li, a, i;
-					input = document.getElementById("myInput");
-					filter = input.value.toUppercase();
-					div = document.getElementById("myDropdown");
-					a = div.getElementByTagName("a");
-					for (i=0; i < a.length; i++)
-					{
-						txtValue = a[i].textContent  || a[i].innerText;
-						if (txtValue.toUpperCase().indexOf(filter) > -1)
-						{
-							a[i].style.display = "";
-						}
-						else
-						{
-							a[i].style.display = "none";
-						}
-					}
-				}
-			</script>
+			
+
 	</body>
 </html>
