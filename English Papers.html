@@ -16,13 +16,14 @@
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</head>
 	<style>
-		.dropbtn
+		.dropbtn 
 		{
 			padding: 16px;
 			font-size: 26px;
 			border: 10px;
 			cursor: pointer;
 		}
+
 		#myInput
 		{
 			width: 1000px;
@@ -36,34 +37,39 @@
 			border: none;
 			border: 1.5px solid #04AA6d ;
 		}
+
 		#myInput:focus
 		{
 			outline: none;
 		}
-		.dropdown
+
+		.dropdown 
 		{
-			position: relative;
-			display: inline-block;
-			border: 10px;
+		  position: relative;
+		  display: inline-block;
+		  border: 10px;
 		}
-		.dropdown-content
+		
+		.dropdown-content 
 		{
-			display: none;
-			position: absolute;
-			background-color: #f6f6f6;
-			width: 960px;
-			overflow: auto;
-			border: 1px solid #ddd;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			z-index: 1;
+		  display: none;
+		  position: absolute;
+		  background-color: #f6f6f6;
+		  width: 960px;
+		  overflow: auto;
+		  border: 1px solid #ddd;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
 		}
-		.dropdown-content a
+		
+		.dropdown-content a 
 		{
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
+		  color: #04AA6D;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
 		}
+		
 		.dropdown a:hover
 		{
 			background-attachment: #ddd;
@@ -72,6 +78,75 @@
 		.show
 		{
 			display: inline-block;
+		}
+		:root
+		{
+			--btn:rgb(74,202,169);
+			--btn-shadow:rgba(74,202,169,0.5);
+		}
+		textarea
+		{
+			margin-top: 30px;
+			height: 200px;
+			border-radius: 5px;
+		}
+		.send
+		{
+			background:var(--btn);
+			color:white;
+			width:20%; 
+			box-shadow:0px 0px 1px 1px var(--btn-shadow);
+			border:none;
+			user-select:none;
+			border-radius:5px;
+			padding:6px 3px;
+		}
+		.send:active
+		{
+			background:var(--btn);
+			animation:pulse 0.05s forwards;
+		}
+		.name
+		{
+			border-radius:5px;
+			border:1px solid black;
+			padding:10px 0;
+		}
+		.email
+		{
+			border-radius:5px;
+			border:1px solid black;
+			padding:10px 0;
+		}
+		.name:focus , textarea:focus,.email:focus
+		{
+			outline:none;
+		}
+		.container
+		{
+			display:flex;
+			justify-content: center;
+			width:min(1000px, 85%);
+			flex-flow:row wrap;
+			/* grid-template-columns:100%; */
+			/* grid-gap:5px; */
+			margin:0 auto;
+		}
+		.container>*:not(.send)
+		{
+			width:100%;
+			margin-bottom:10px;
+		}
+		@keyframes pulse 
+		{
+			from
+			{
+				box-shadow:0px 0px 1px 0px var(--btn-shadow);
+			}
+			to
+			{
+				box-shadow:0px 0px 0px 4px var(--btn-shadow);
+			}
 		}
 	</style>
 	<body class="is-preload">
@@ -157,12 +232,19 @@
 							</div>
 						</section>
 				
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Contact Us</h3>
-								</div>
-							</section>
+						<!-- Footer -->
+						<section id="footer">
+							<div class="container">
+								<ul class="copyright">
+									<li>&copy; CubeBooks 2022. All rights reserved.</li>
+								</ul>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/company/78048587/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://www.instagram.com/cubebooks/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="mailto:cubebooks.netlify@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</div>
+						</section>
 
 					</div>
 
@@ -213,6 +295,30 @@
 						{
 							a[i].style.display = "none";
 						}
+					}
+				}
+			</script>
+			<script>
+				function sendReq()
+				{
+					var name=document.getElementsByClassName("name")[0].value;
+					var msg=document.getElementsByTagName("textarea")[0].value;
+					var email=document.getElementsByClassName("email")[0].value;
+					if([name.length,msg.length,email.length].includes(0))
+					{
+						alert("you must fill all the fields");
+					}
+					else
+					{
+						msg="feedback from "+name+"\n"+email+" :\n"+msg;
+						var xhttp=new XMLHttpRequest();
+						xhttp.open("GET",encodeURI("https://api.telegram.org/bot1785343477:AAGfO1PIpAwAKUu8BF6IkIgUgoTxPTJo-a0/sendMessage?chat_id=-1001262147694&text="+msg),true);
+						xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+						xhttp.send();
+						document.getElementsByClassName("name")[0].value="";
+						document.getElementsByTagName("textarea")[0].value="";
+						document.getElementsByClassName("email")[0].value="";
+						alert("thank you for your feedback !");
 					}
 				}
 			</script>
