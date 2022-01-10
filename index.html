@@ -125,6 +125,86 @@
 				box-shadow:0px 0px 0px 4px var(--btn-shadow);
 			}
 		}
+
+		.blink
+		{
+			font-size: 20px;
+			margin-left: 85px;
+			margin-right: 150px;
+			font-family: Trebuchet MS;
+			font-weight: bold;
+			color: #ff0000;
+			animation: blink 500ms linear infinite ;
+		}
+		@keyframes blink
+		{
+			100%
+			{
+				color: #ffee00;
+			}
+		}
+
+		@import url('https://fonts.googleeapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+	.wrapper
+	{
+		display: flex;
+		line-height: 90px;
+		height: 90px;
+		overflow: hidden;
+	}
+	.wrapper .static-txt
+	{
+		color: rgb(97, 97, 97);
+		font-size: 30px;
+		font-weight: 200;
+	}
+	.wrapper .dynamic-txts
+	{
+		margin-left: 2px;
+	}
+	.dynamic-txts li
+	{
+		list-style: none;
+		color: rgb(74,202,169);
+		font-size: 30px;
+		font-weight: 300;
+		top: 0;
+		position: relative;
+		animation: slide 12s steps(2) infinite;
+	}
+	@keyframes slide
+	{
+		100%
+		{
+			top: -360px;
+		}
+	}
+	.dynamic-txts li
+	{
+		position: relative;
+	}
+	.dynamic-txts li::after
+	{
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: white;
+		border-left: 2px solid rgb(74,202,169);
+		animation: typing 3s steps(15) infinite;
+	}
+	@keyframes typing
+	{
+		40%,
+		60%
+		{
+			left: calc(100% + 30px);
+		}
+		100%
+		{
+			left: 0;
+		}
+	}
 	</style>
 	<body class="is-preload">
 
@@ -169,13 +249,26 @@
 									</header>
 									<p class="animated fadeInRight">It is an open-source platform. Now one does not have to surf web pages after webpages to find a pdf of a single. As CubeBooks by everyone's sides, one does not have to worry to find pdfs. CubeBooks is under development soon it will be the junction point of all books.</p>
 								</div>
+								<div class="blink">
+									<span data-position="center">
+										<i><u>NOTICE:</u></i>
+										<br>
+										Hi Guys! Due to some technical issues, some of the books were not uploaded, please reach us through our contact form or through any social media handles of cube books to find them.
+									</span>
+								</div>
 							</section>
 
 						<!-- Two -->
 							<section id="two">
 								<div class="container">
 									<h2 class="animated zoomIn"><b>BOOKS</b></h2>
-									<p>We are still updating the books, please us know if want any book to added</p>
+									<div class="wrapper">
+										<div class="static-txt"><i>Our highlighted books:</i></div>
+										<ul class="dynamic-txts">
+											<li><span><a href="https://drive.google.com/folderview?id=1XwKMlE1ZPJ8wU50DTI29ipMI73fD1fl4">Arihant JEE</a></span></li>
+											<li><span><a href="https://drive.google.com/folderview?id=1YBariOhH_8L2v0s7apO4bwWfoYCQC-Vs">Arihant NEET</a></span></li>
+										</ul>
+									</div>
 									<ul class="feature-icons">
 										<li class="solid icon fa-book">
 											<div class="dropdown">
@@ -239,11 +332,50 @@
 										</li>
 										<li class="solid icon fa-book">
 											<div class="dropdown">
-											<button class="dropbtn"><h4 class="animated fadeInRight">Commerce</h4></button>
+											<button class="dropbtn"><h4 class="animated fadeInRight">Accounts</h4></button>
 											<div class="dropdown-content">
-												<a href="Commerce%20Books.html">Books</a>
-												<a href="Commerce%20Notes.html">Notes</a>
-												<a href="Commerce%20Papers.html">Question Papers</a>
+												<a href="Accounts%20Books.html">Books</a>
+												<a href="Accounts%20Notes.html">Notes</a>
+												<a href="Accounts%20Papers.html">Question Papers</a>
+											</div>
+											</div>
+										</li>
+										<li class="solid icon fa-book">
+											<div class="dropdown">
+											<button class="dropbtn"><h4 class="animated fadeInRight">Economics</h4></button>
+											<div class="dropdown-content">
+												<a href="Economics%20Books.html">Books</a>
+												<a href="Economics%20Notes.html">Notes</a>
+												<a href="Economics%20Papers.html">Question Papers</a>
+											</div>
+											</div>
+										</li>
+										<li class="solid icon fa-book">
+											<div class="dropdown">
+											<button class="dropbtn"><h4 class="animated fadeInRight">Physical Education</h4></button>
+											<div class="dropdown-content">
+												<a href="Physical%20Education%20Books.html">Books</a>
+												<a href="Physical%20Education%20Notes.html">Notes</a>
+												<a href="Physical%20Education%20Papers.html">Question Papers</a>
+											</div>
+											</div>
+										</li>
+										<li class="solid icon fa-book">
+											<div class="dropdown">
+											<button class="dropbtn"><h4 class="animated fadeInRight">Business Studies</h4></button>
+											<div class="dropdown-content">
+												<a href="Business%20Studies%20Books.html">Books</a>
+												<a href="Business%20Studies%20Notes.html">Notes</a>
+												<a href="Business%20Studies%20Papers.html">Question Papers</a>
+											</div>
+											</div>
+										</li>
+										<li class="solid icon fa-book">
+											<div class="dropdown">
+											<button class="dropbtn"><h4 class="animated fadeInRight">CLASS 10</h4></button>
+											<div class="dropdown-content">
+												<a href="CISCE.html">CISCE</a>
+												<a href="CBSE.html">CBSE</a>
 											</div>
 											</div>
 										</li>
